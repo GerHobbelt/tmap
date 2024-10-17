@@ -3,7 +3,7 @@
 
 using namespace ogdf;
 
-int main()
+int main(void)
 {
 	Hypergraph H;
 

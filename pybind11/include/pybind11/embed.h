@@ -221,7 +221,7 @@ inline void finalize_interpreter() {
 
         #include <pybind11/embed.h>
 
-        int main() {
+        int main(void) {
             py::scoped_interpreter guard{};
             py::print(Hello, World!);
         } // <-- interpreter shutdown

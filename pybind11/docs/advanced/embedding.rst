@@ -33,7 +33,7 @@ The essential structure of the ``main.cpp`` file looks like this:
     #include <pybind11/embed.h> // everything needed for embedding
     namespace py = pybind11;
 
-    int main() {
+    int main(void) {
         py::scoped_interpreter guard{}; // start the interpreter and keep it alive
 
         py::print("Hello, World!"); // use the Python API
@@ -56,7 +56,7 @@ the context of an executable with an embedded interpreter:
     #include <pybind11/embed.h>
     namespace py = pybind11;
 
-    int main() {
+    int main(void) {
         py::scoped_interpreter guard{};
 
         py::exec(R"(
@@ -75,7 +75,7 @@ Alternatively, similar results can be achieved using pybind11's API (see
     namespace py = pybind11;
     using namespace py::literals;
 
-    int main() {
+    int main(void) {
         py::scoped_interpreter guard{};
 
         auto kwargs = py::dict("name"_a="World", "number"_a=42);
@@ -93,7 +93,7 @@ The two approaches can also be combined:
     namespace py = pybind11;
     using namespace py::literals;
 
-    int main() {
+    int main(void) {
         py::scoped_interpreter guard{};
 
         auto locals = py::dict("name"_a="World", "number"_a=42);
@@ -160,7 +160,7 @@ like any other module.
         });
     }
 
-    int main() {
+    int main(void) {
         py::scoped_interpreter guard{};
 
         auto fast_calc = py::module_::import("fast_calc");
@@ -194,7 +194,7 @@ naturally:
         m.attr("a") = 1;
     }
 
-    int main() {
+    int main(void) {
         py::scoped_interpreter guard{};
 
         auto py_module = py::module_::import("py_module");

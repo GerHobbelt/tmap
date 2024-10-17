@@ -83,7 +83,7 @@ namespace cereal
         }
       };
 
-      int main()
+      int main(void)
       {
         {
           MyUserData md;

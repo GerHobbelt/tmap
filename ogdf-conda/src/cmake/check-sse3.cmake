@@ -2,7 +2,7 @@ include(CheckCXXSourceCompiles)
 
 check_cxx_source_compiles("
 #include <pmmintrin.h>
-int main() {
+int main(void) {
 	__m128d a = _mm_set1_pd(42), b = _mm_set1_pd(23);
 	_mm_hadd_pd(a, b);
 	return 0;
@@ -11,7 +11,7 @@ int main() {
 if (NOT has_sse3_pmmintrin)
   check_cxx_source_compiles("
 #include <intrin.h>
-int main() {
+int main(void) {
 	__m128d a = _mm_set1_pd(42), b = _mm_set1_pd(23);
 	_mm_hadd_pd(a, b);
 	return 0;

@@ -4,7 +4,7 @@
 
 using namespace ogdf;
 
-int main()
+int main(void)
 {
 	Graph G;
 	randomSimpleGraph(G, 10, 20);

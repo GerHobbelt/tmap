@@ -8,7 +8,7 @@
 
 using namespace ogdf;
 
-int main()
+int main(void)
 {
 	Graph G;
 	GraphAttributes GA(G,

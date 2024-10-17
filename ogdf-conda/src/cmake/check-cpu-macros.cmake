@@ -2,7 +2,7 @@ include(CheckCXXSourceCompiles)
 
 check_cxx_source_compiles("
 #include <sched.h>
-int main() {
+int main(void) {
 	cpu_set_t mask;
 	CPU_ZERO(&mask);
 	return 0;

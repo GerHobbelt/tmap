@@ -1,6 +1,6 @@
 #include <ogdf/basic/basic.h>
 
-int main() {
+int main(void) {
 #ifdef OGDF_DEBUG
 	bool debugMode = true;
 #else

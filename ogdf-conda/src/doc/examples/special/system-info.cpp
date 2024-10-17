@@ -8,7 +8,7 @@ const char *yn(bool b)
 	return b ? "yes" : "no";
 }
 
-int main()
+int main(void)
 {
 	std::cout
 	  << "---------------------------------------" << std::endl

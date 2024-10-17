@@ -14,7 +14,7 @@ Snowhouse is a stand-alone assertion framework for C++.
 
 using namespace snowhouse;
 
-int main()
+int main(void)
 {
   std::cout << "Testing that 23 is 23" << std::endl;
   AssertThat(23, Is().EqualTo(23));

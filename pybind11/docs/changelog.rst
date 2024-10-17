@@ -1460,7 +1460,7 @@ v2.2.0 (August 31, 2017)
       #include <pybind11/embed.h>
       namespace py = pybind11;
 
-      int main() {
+      int main(void) {
           py::scoped_interpreter guard{}; // start the interpreter and keep it alive
 
           py::print("Hello, World!"); // use the Python API
